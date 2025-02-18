@@ -14,7 +14,7 @@ public class AIplayer : MonoBehaviour
     }
     void Update()
     {
-        
+
         if (ball.position.x > transform.position.x)
         {
             rb.linearVelocity = new Vector2(moveSpeed, rb.linearVelocity.y);
@@ -24,7 +24,7 @@ public class AIplayer : MonoBehaviour
             rb.linearVelocity = new Vector2(-moveSpeed, rb.linearVelocity.y);
         }
 
-        
+
         if (Mathf.Abs(ball.position.x - transform.position.x) < 2f && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -38,5 +38,4 @@ public class AIplayer : MonoBehaviour
             isGrounded = true;
         }
     }
-
 }
